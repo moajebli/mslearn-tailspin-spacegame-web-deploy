@@ -9,6 +9,7 @@ using System.Collections;
 
 namespace UITests
 {
+    [TestFixture("Chrome")]
     [TestFixture("Firefox")]
     [TestFixture("IE")]
     public class HomePageTest
@@ -65,7 +66,7 @@ namespace UITests
             catch (DriverServiceNotFoundException)
             {
             }
-            catch (WebDriverException)
+            catch (Exception)
             {
                 Cleanup();
             }
